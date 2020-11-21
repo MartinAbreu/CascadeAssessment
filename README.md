@@ -1,5 +1,7 @@
 # Cascade FinTech Assessment
 
+![alt text](https://github.com/brolz/[CascadeAssessment]/blob/[main]/screenshot.png?raw=true)
+
 ## Problem
 ```
 Display the given data in vuex store and display it to the user.
