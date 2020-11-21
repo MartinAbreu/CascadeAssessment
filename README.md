@@ -1,6 +1,6 @@
 # Cascade FinTech Assessment
 
-![alt text](https://github.com/brolz/[CascadeAssessment]/blob/[main]/screenshot.png?raw=true)
+![alt text](https://github.com/brolz/CascadeAssessment/blob/main/src/assets/screenshot.png?raw=true)
 
 ## Problem
 ```
