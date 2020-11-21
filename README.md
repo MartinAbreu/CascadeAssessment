@@ -2,7 +2,7 @@
 
 ## Problem
 ```
-Display given data in vuex to the user
+Display the given data in vuex store and display it to the user.
 ```
 
 ## Solution
