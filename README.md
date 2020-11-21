@@ -7,7 +7,7 @@ Display given data in vuex to the user
 
 ## Solution
 ```
-I grabbed the data with a getter and passed it to my TransactionsList component.
+I started by grabbing the data with a getter and passing it to my TransactionsList component.
  In my component I used a 'v-for' directive to render the list of items based 
  on the data given.
 
