@@ -1,24 +1,15 @@
-# transactionfeed
+# Cascade FinTech Assessment
 
-## Project setup
+## Problem
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+Display given data in vuex to the user
 ```
 
-### Compiles and minifies for production
+## Solution
 ```
-npm run build
-```
+I grabbed the data with a getter and passed it to my TransactionsList component. In my component I used a 'v-for' directive to render the list of items based on the data given.
 
-### Lints and fixes files
-```
-npm run lint
-```
+To calculate the balances I created two computed properties, One to gather all the transaction amounts that were 'billed' and get the remaing balance. And the other to get the total balance after every transaction is completed. I then used them in my Latest and Pending Transactions sections respectively.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For the dates I just used vanilla Js Date object and passed the transaction date followed by making it a string and slicing it to only show Day, Month, Date, Year, and Time.
+```
