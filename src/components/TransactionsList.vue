@@ -1,9 +1,11 @@
 <template>
+<!-- Showing available balance -->
     <div class="transactions">
         <div class="balance">            
                 <span class="currentAmount">${{ this.allTransactions[0].AvailableBalance.toFixed(2) }}</span>
                 <span class="balanceTitle">Starting Balance</span>        
         </div>
+<!-- Latest transactions section -->
         <h1>Latest Transactions</h1>
             <div class="latest" v-for="(transaction, index) in allTransactions" :key="index">
                 <div class="transaction"  v-if="transaction.Billed">                
@@ -27,6 +29,7 @@
                     <span class="balanceAmount">${{ remainingBalance[this.allTransactions.length - 1].toFixed(2) }}</span>
                 </div>   
             </div>
+<!-- Pending transactions section -->
         <h1>Pending Transactions</h1>
         <div class="pending" v-for="(transaction, index) in allTransactions" :key="index + 100">
             <div class="transaction"  v-if="!transaction.Billed">
@@ -59,7 +62,9 @@ import {mapGetters} from 'vuex';
 export default {
     name: 'TransactionsList',
     computed: {
+        // Getting all transactions
         ...mapGetters(['allTransactions']),
+                //Computing balance of completed transactions     
             remainingBalance: function () {
                 var availableBalance = this.allTransactions[0].AvailableBalance;
                 return this.allTransactions.map((transaction) => {
@@ -68,6 +73,7 @@ export default {
                     }
                 });
             },
+                //Computing balance when all transactions are completed
             potentialBalance: function () {
                 var availableBalance = this.allTransactions[0].AvailableBalance;
                 return this.allTransactions.map((transaction) => {                                           
@@ -133,7 +139,6 @@ export default {
     .balanceAmount{
         font-size: 2rem;
     }
-
     .balanceTitle{
         font-size: 1rem;
     }

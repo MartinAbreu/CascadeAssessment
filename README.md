@@ -14,7 +14,7 @@ I started by grabbing the data with a getter and passing it to my TransactionsLi
  on the data given.
 
 To calculate the balances I created two computed properties, One to gather 
-all the transaction amounts that were 'billed' and get the remaing balance. 
+all the transaction amounts that were 'billed' and get the remaining balance. 
 And the other to get the total balance after every transaction is completed. 
 I then used them in my Latest and Pending Transactions sections respectively.
 

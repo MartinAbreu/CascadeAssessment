@@ -1,3 +1,5 @@
+
+//Transaction data provided
 const state = {
     "Statement": {
 		"Transactions": [{
@@ -65,10 +67,13 @@ const state = {
 		}]
 	}
 };
+
+//Wrapping all transactions in a getter for export
 const getters = {
     allTransactions: (state) => state.Statement.Transactions,
 };
 
+//Exporting the transactions
 export default {
     state,
     getters,
